@@ -3,3 +3,5 @@ Django  Structure - MVT (Models Views Templates)
 models - data related to the applications, database tables
 views - business logics, 
 templates - frontend parts
+
+edited
