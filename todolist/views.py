@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.shortcuts import HttpResponse
+from .models import *
 # Create your views here.
 def home(request):
    person = [
@@ -19,4 +20,17 @@ def index(request):
 
 def contact(request):
    return render(request, 'contact.html')
+
+def task_list(request):
+   tasks = Todolist.objects.all()
+   context = {
+      "tasks":tasks
+   }
+   return render(request, 'task.html',context)
+
+def task_create(request):
+   if request.method == "POST":
+      title = request.POST.get('title')
+      return HttpResponse(title)
+   return render(request,'create.html')
 # contact, about...
