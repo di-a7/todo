@@ -6,4 +6,6 @@ urlpatterns = [
    path('home/',home),
    path('index/',index),
    path('contact/',contact),
+   path('task/',task_list),
+   path('task/create/',task_create)
 ]
